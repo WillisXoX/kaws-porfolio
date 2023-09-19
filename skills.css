@@ -1,0 +1,412 @@
+.skills {
+    width: 200vw;
+    height: 100vh;
+    transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    /* border: 2px solid red; */
+    background-color: var(--white-regular);
+}
+.skills.active {
+    margin-left: -100vw;
+}
+.skills > .container {
+    width: 200vw;
+    height: 100vh;
+    /* padding: 0 5em; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+.skills > .container .designer,
+.skills > .container .coder {
+    width: 100%;
+    max-width: 1600px; /* max-width */
+    background-color: var(--white-regular);
+    transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+   
+    height: 100vh;
+    overflow: hidden;
+    /* border: 2px solid blue; */
+}
+
+
+/* Designer */
+.skills > .container .designer {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 2px solid green; */
+}
+.skills > .container .designer > .container p,
+.skills > .container .coder > .container p {
+    margin: 1.5em 0;
+    margin-top: 0;
+}
+.skills > .container .designer > .container,
+.skills > .container .coder > .container {
+    z-index: 1;
+    opacity: 0;
+    margin-top: 3em;
+    /* border: 2px solid green; */
+}
+.skills > .container .designer h1,
+.skills > .container .coder h1 {
+    position: relative;
+    margin: .2em 0;
+    margin-bottom: .6em;
+}
+.skills > .container .designer h1 .primary {
+    color: var(--brown-regular);
+}
+.skills > .container .designer .circles,
+.skills > .container .coder .circles {
+    margin-top: 3em;
+    width: 100%;
+    /* border: 2px solid red; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills > .container .designer .circles .circle,
+.skills > .container .coder .circles .circle {
+    margin: 0 .5em;
+}
+.skills > .container .designer .circles .circle:nth-child(1) {
+    background-color: var(--red-regular);
+    border: none;
+}
+
+
+/* Designer Images */
+.skills > .container .designer img.bkg {
+    position: absolute;
+    width: 60%;
+    height: 100vh;
+    right: -15%;
+    transition: 0.3s ease-in-out;
+    opacity: 1;
+}
+.skills > .container .designer img.icons {
+    position: absolute;
+    width: auto;
+    max-height: calc(100vh - 200px);
+    right: 5%;
+    bottom: 40%;
+    transform: translate(0%, 40%);
+    opacity: 0;
+}
+.skills > .container .designer img.non-dissected {
+    position: absolute;
+    width: auto;
+    right: 0px;
+    bottom: -250px;
+
+    height: calc(100vh - 80px);
+    min-height: 568px;
+    opacity: 0;
+    /* border: 2px solid red; */
+}
+
+
+
+
+
+/* Trigger animation on reveal */
+
+/* On scroll y-asxis */
+/* .skills > .reveal.active .designer > .container,
+.skills > .reveal.active .coder > .container {
+    animation: text-fadeIn5 .8s ease-in-out .3s forwards;
+} */
+.skills > .reveal.active .designer img.icons {
+    animation: opacity-fadeIn .8s ease-in-out .5s forwards,
+        designer-icons .8s cubic-bezier(.62,.43,.35,1.1) .5s forwards;
+}
+.skills > .reveal.active .designer img.non-dissected {
+    animation: opacity-fadeIn .8s ease-in-out .3s forwards,
+        kaws-fadeIn .8s ease-in-out .3s forwards;
+}
+
+/* On scroll x-asxis */
+.skills > .reveal.active .designer > .container {
+    animation: block-fadeIn .8s ease-in-out .3s forwards;
+}
+
+
+
+
+
+/* Coder */
+.skills > .container .coder {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+.skills > .container .coder h1 .primary {
+    font-family: Cooper, sans-serif;
+    color: var(--brown-regular);
+}
+.skills > .container .coder .circles .circle:nth-child(2) {
+    background-color: var(--red-regular);
+    border: none;
+}
+
+/* Coder Images */
+.skills > .container .coder img.bkg {
+    position: absolute;
+    width: 60%;
+    height: 100vh;
+    left: -15%;
+}
+.skills > .container .coder img.icons {
+    /* display: none; */
+    position: absolute;
+    width: auto;
+    max-height: calc(100vh - 200px);
+    left: 5%;
+    bottom: 40%;
+    transform: translate(0%, 40%);
+    opacity: 0;
+}
+.skills > .container .coder img.dissected {
+    /* display: none; */
+    position: absolute;
+    width: auto;
+    left: 0px;
+    bottom: -250px;
+    /* bottom: -35px; */
+
+    height: calc(100vh - 80px);
+    min-height: 568px;
+    opacity: 0;
+}
+
+
+/* On scroll y-asxis */
+.skills > .reveal.active .coder img.icons {
+    animation: opacity-fadeIn .8s ease-in-out .5s forwards,
+        coder-icons .8s cubic-bezier(.62,.43,.35,1.1) .5s forwards;
+}
+.skills > .reveal.active .coder img.dissected {
+    animation: opacity-fadeIn .8s ease-in-out .3s forwards,
+        kaws-fadeIn .8s ease-in-out .3s forwards;
+}
+
+
+/* On scroll x-asxis */
+.skills > .reveal.active .coder > .container {
+    animation: block-fadeIn .8s ease-in-out .3s forwards;
+}
+
+
+@media (max-width: 1366px) {
+    .skills > .reveal.active .designer > .container,
+    .skills > .reveal.active .coder > .container {
+        animation: block-fadeIn1 .8s ease-in-out .3s forwards;
+    }
+}
+@media (max-width: 1240px) {
+    .skills > .container .designer img.bkg {
+        right: -25%;
+    }
+    .skills > .container .designer img.non-dissected,
+    .skills > .container .coder img.dissected {
+        display: none;
+    }
+    .skills > .container .designer img.icons {
+        right: 1em;
+        max-height: 500px;
+        height: auto;
+    }
+    .skills > .container .coder img.icons {
+        left: 1em;
+        max-height: 500px;
+        height: auto;
+    }
+
+    .skills > .reveal.active .designer img.icons {
+        animation: opacity-fadeIn .8s ease-in-out .5s forwards,
+            designer-icons1 .8s cubic-bezier(.62,.43,.35,1.1) .5s forwards;
+    }
+    .skills > .reveal.active .coder img.icons {
+        animation: opacity-fadeIn .8s ease-in-out .5s forwards,
+            coder-icons1 .8s cubic-bezier(.62,.43,.35,1.1) .5s forwards;
+    }
+}
+@media (max-width: 960px) {
+    .skills > .reveal.active .designer > .container,
+    .skills > .reveal.active .coder > .container {
+        animation: block-fadeIn2 .8s ease-in-out .3s forwards;
+    }
+}
+@media (max-width: 760px) {
+    .skills {
+        transition: all 1s ease-in-out;
+    }
+    .skills > .container .designer > .container p,
+    .skills > .container .coder > .container p {
+        margin: 1em 0;
+    }
+    .skills > .container .designer,
+    .skills > .container .coder {
+        padding: 0 1em;
+        /* margin: 0; */
+        justify-content: center;
+    }
+    .skills > .container .designer > .container,
+    .skills > .container .coder > .container {
+        margin: 0em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .skills > .container .designer img.bkg,
+    .skills > .container .coder img.bkg {
+       display: none;
+    }
+    .skills > .container .designer .circles,
+    .skills > .container .coder .circles {
+        margin-top: 1em;
+    }
+    .skills > .container .designer img.icons,
+    .skills > .container .coder img.icons {
+        display: none;
+    }
+    .skills > .reveal.active .designer > .container,
+    .skills > .reveal.active .coder > .container {
+        animation: block-moveIn .8s ease-in-out .3s forwards;
+    }
+}
+@media (max-width: 360px) {
+    .skills > .container .designer > .container {
+        margin-top: 0px;
+    }
+    .skills > .container .designer {
+        align-items: center;
+    }
+    .skills > .container .designer img.icons {
+        display: none;
+    }
+}
+
+/* Animations */
+
+/* Text animations */
+@keyframes opacity-fadeIn {
+    from {
+        opacity: 0;
+    }to {
+        opacity: 1;
+    }
+}
+@keyframes block-fadeIn {
+    from {
+        opacity: 0;
+        margin: 0 0em;
+    }to {
+        opacity: 1;
+        margin: 0 5em;
+    }
+}
+@keyframes block-fadeIn1 {
+    from {
+        opacity: 0;
+        margin: 0 0em;
+    }to {
+        opacity: 1;
+        margin: 0 3em;
+    }
+}
+@keyframes block-fadeIn2 {
+    from {
+        opacity: 0;
+        margin: 0 0em;
+    }to {
+        opacity: 1;
+        margin: 0 1em;
+    }
+}
+@keyframes block-moveIn {
+    from {
+        opacity: 0;
+        margin-top: 5em;
+    }to {
+        opacity: 1;
+        margin-top: 0em;
+    }
+}
+
+/* Designer animations */
+@keyframes designer-icons {
+    from {
+        right: 5%;
+    }to {
+        right: 18%;
+    }
+}
+@keyframes designer-icons1 {
+    from {
+        right: -5em;
+    }to {
+        right: 1em;
+    }
+}
+
+/* Coder animations */
+@keyframes coder-icons {
+    from {
+        left: 5%;
+    }to {
+        left: 14%;
+    }
+}
+@keyframes coder-icons1 {
+    from {
+        left: -5em;
+    }to {
+        left: -1em;
+    }
+}
+
+/* @keyframes designer-icons-1 {
+    from {
+        right: 5%;
+    }to {
+        right: 18%;
+    }
+} */
+
+/* @keyframes designer-icons1-1 {
+    from {
+        right: -5em;
+    }to {
+        right: 1em;
+    }
+} */
+
+
+/* @keyframes coder-icons-1 {
+    from {
+        left: 5%;
+    }to {
+        left: 12%;
+    }
+}
+
+@keyframes coder-icons1-1 {
+    from {
+        left: -5em;
+    }to {
+        left: 1em;
+    }
+} */
+
+

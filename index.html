@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/navbar/logo.ico">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="intro.css">
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Kaws Portfolio</title>
+</head>
+<body>
+
+    <div class="app">
+
+        <div class="navbar">
+            <div class="container">
+    
+                <div class="logo">
+                    <a href="">
+                        <img src="./images/navbar/logo.png" alt="Logo" />
+                    </a>
+                    <small class="menu" onclick="toogleNavbar()">Toggle</small>
+                </div>
+                
+                <div class="links">
+                    <div class="container">
+                        <ul>
+                            <li><a href="#intro" onclick="toogleNavbar()">HOME</a></li>
+                            <li><a href="#projects" onclick="toogleNavbar()">PROJECTS</a></li>
+                            <li><a href="#about" onclick="toogleNavbar()">ABOUT</a></li>
+                        </ul>
+                        <a href="#contact" onclick="toogleNavbar()">
+                            <button>CONTACT</button>
+                        </a>
+                        
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
+        <div class="intro" id="intro"> 
+            <div class="container reveal">
+    
+                <img class="geometry" src="./images/intro/geometry.png" alt="geometry" />
+                <img class="dissected" src="./images/intro/half-dissected1.png" alt="half-dissected" />
+                <img class="non-dissected" src="./images/intro/non-disscted.png" alt="non-disscted" />
+                
+    
+                <div class="header">
+                    <div class="textbox">
+                        <p>Hi, I am</p>
+                        <p class="bold">WillisXOX ___</p>
+                    </div>
+                    <div class="circles">
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                    </div>
+                </div>
+    
+                <div class="main">
+                    <div class="container">
+                        <small>ILLUSTRATION</small>
+                        <h1 class="primary">PORTFOLIO</h1>
+                        <h1>KAWS THEME</h1>
+                        <p>a professional Graphic designer / Fullstack developer 
+                            for <span class="bold">5+ years now.</span>
+                        </p>
+                        <button>HIRE ME</button>
+                    </div>
+                </div>
+    
+                <div class="footer">
+                    <div class="follow">
+                        <p>Follow me</p>
+                        <div class="links">
+                            <a href="">
+                                <img src="./images/intro/facebook-white.png" alt="facebook" />
+                            </a>
+                            <a href="">
+                                <img src="./images/intro/linkedin-white.png" alt="linkedin" />
+                            </a>
+                            <a href="https://github.com/WillisXoX" target="_blank">
+                                <img src="./images/intro/github-white.png" alt="github" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rights">
+                        <p>All rights reserved</p>
+                        <img src="./images/intro//orginal-logo.png" alt="originalfake" />
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
+        <div class="skills" id="skills">
+            <div class="container reveal">
+    
+                <div class="designer">
+                    <img class="bkg" src="./images/skills/designer-bkg.png" alt="designer-bkg" />
+                    <img class="icons" src="./images/skills/designer-icons.png" alt="designer-icons" />
+                    <img class="non-dissected" src="./images/skills/designer.png" alt="designer" />
+    
+                    <div class="container">
+                        <small>GRAPHICS</small>
+                        <h1>D<span class="primary">Ǝ</span>SIGNER</h1>
+                        <p>UX/UI designer with a passion for designing outstanding brands and functional user experiences.</p>
+                        <p>As a designer, a lot is put in place such as <b>Creativity, Intuition, Planning</b> and <b>Innovation</b> during the process of brainstorming to produce good and quality design.</p>
+    
+                        <div class="circles">
+                            <span class="circle"></span>
+                            <span class="circle" onclick="toogleSlider()"></span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="coder">
+                    <img class="bkg" src="./images/skills/coder-bkg.png" alt="coder-bkg" />
+                    <img class="icons" src="./images/skills/coder-icons.png" alt="coder-icons" />
+                    <img class="dissected" src="./images/skills/coder.png" alt="coder" />
+    
+                    <div class="container">
+                        <small>FULLSTACK</small>
+                        <h1>C<spam class="primary">< ></spam>DER</h1>
+                        <p>Fullstack Coder who focuses on writing clean, quality, efficient and reusable code.</p>
+                        <p>Coding is very interesting because it helps you build on <b>Problem Solving, Time management</b> and <b>Adaptation</b> through out the entire process of software development.</p>
+                        <div class="circles">
+                            <span class="circle" onclick="toogleSlider()"></span>
+                            <span class="circle"></span>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
+        <div class="about" id="about">
+            <div class="container reveal">
+
+                <img class="profile" src="./images/about/profil.png" alt="profil" />
+
+                    <div class="main">
+                        <img class="profile1" src="./images/about/profil.png" alt="profil" />
+                        <small>WHAT</small>
+                        <h1>ABOUT <spam class="primary">M</spam>E</h1>
+                        <p>I am a degree holder in computer science with over 5+ years of experience in programming and web design.</p>
+                        <p>Greatly <b>creative</b> with good <b>analytical skills</b>...</p>
+                        <button>DOWNLOAD CV</button>
+                    </div>
+                    
+                    <!-- <div class="follow">
+                        <p>Follow me</p>
+                        <div class="links">
+                            <a href="">
+                                <img src="./images/intro/facebook-white.png" alt="facebook" />
+                            </a>
+                            <a href="">
+                                <img src="./images/intro/linkedin-white.png" alt="linkedin" />
+                            </a>
+                            <a href="https://github.com/WillisXoX" target="_blank">
+                                <img src="./images/intro/github-white.png" alt="github" />
+                            </a>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+
+        <div class="projects" id="projects">
+            <div class="container reveal">
+
+                <div class="header">
+                    <div class="container">
+                        <small>LATEST</small>
+                        <h1>PR<span class="primary">O</span>JECTS</h1>
+                        <p>I have selected and mentioned here some of my 
+                            <span class="bold">latest projects</span> to share with you.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="main">
+                    <div class="container">
+
+                        <!-- Splash Battle -->
+                        <div class="project">
+                                <img class="bkg" src="./images/projects/what-about-you.png" alt="what-about-you" />
+                                <a href="" class="container">
+                                    <small class="date">20. 10. 22</small>
+                                    <small>SPLASH BATTLE</small>
+                                    <h2>WHAT ABOUT YOU</h2>
+                                    <h2 class="primary">EVENT</h2>
+                                    <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form...
+                                    </p>
+                                </a>
+                                    <!-- <button>READ MORE</button> -->
+                            
+                            
+                        </div>
+
+                        <!-- Splash Battle -->
+                        <div class="project">
+                            <img class="bkg" src="./images/projects/rental-estate-housing.png" alt="rental-estate-housing" />
+                            <a href="" class="container">
+                                <small class="date">20. 10. 22</small>
+                                <small>NDA KAMER</small>
+                                <h2>RENTAL ESTATE</h2>
+                                <h2 class="primary">HOUSING</h2>
+                                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form...
+                                </p>
+                                <!-- <button>READ MORE</button> -->
+                            </a>
+                        </div>
+
+                        <!-- Splash Battle -->
+                        <div class="project">
+                            <img class="bkg" src="./images/projects/car-inspection.png" alt="car-inspection" />
+                            <a href="" class="container">
+                                <small class="date">20. 10. 22</small>
+                                <small>SPLASH BATTLE</small>
+                                <h2>WHAT ABOUT YOU</h2>
+                                <h2 class="primary">EVENT</h2>
+                                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form...
+                                </p>
+                                <!-- <button>READ MORE</button> -->
+                            </a>
+                        </div>
+
+                        <!-- Splash Battle -->
+                        <div class="project">
+                            <img class="bkg" src="./images/projects/strawberry-flyer.png" alt="strawberry-flyer" />
+                            <a href="" class="container">
+                                <small class="date">20. 10. 22</small>
+                                <small>JUICE INC</small>
+                                <h2>STRAWBERRY</h2>
+                                <h2 class="primary">JUICE</h2>
+                                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form...
+                                </p>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact" id="contact">
+            <div class="container">
+                <img class="kaws" src="./images/contact/kaws.png" alt="kaws-family" />
+                <img class="kaws-text" src="./images/contact/companion-text.png" alt="companion-text" />
+                <div class="main">
+                    <div class="container">
+                        <small>MAIL ME</small>
+                        <h1>CONT<span class="primary">A</span>CT</h1>
+
+                        <form action="https://formsubmit.co/williamstone4041@gmail.com" method="POST">
+                            <input type="hidden" name="_next" value="">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Richard Austin" required />
+
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" placeholder="richardaustin24@gmail.com" required />
+
+                            <label for="message">Message</label>
+                            <input type="text" name="message" id="message" placeholder="Hi, I will like to hire you." required />
+
+                            <button type="submit">SUBMIT</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<script>
+
+    const navbar = document.querySelector('.navbar');
+    const menu = document.querySelector('.menu');
+    const navbar_links = document.querySelector('.links');
+
+    /* Navbar */
+    /* menu.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+ */
+    function toogleNavbar() {
+        navbar.classList.toggle('active');
+    }
+
+    /* Skills */
+    const skills = document.querySelector('.skills');
+    const skillsContainer = skills.querySelector('.container');
+
+    function toogleSlider() {
+       skills.classList.toggle('active');
+    }
+    setInterval(toogleSlider, 15000);
+
+    /* const observer = new IntersectionObserver(entries => {
+        entries.forEach(elem => {
+            if (elem.isIntersecting) {
+                elem.target.classList.add("active");
+                console.log(elem.target);
+                console.log('Ping! Visible: ', text);
+            }else {
+                elem.target.classList.remove("active");
+            }
+        });
+    });
+    document.querySelectorAll('.reveal').forEach(elem => observer.observe(elem)); */
+
+   
+
+    const sections = [...document.querySelectorAll(".reveal")];
+
+    let options = {
+        rootMargin: "0px",
+        threshold: 0.15
+    };
+
+    const callback = (entries, observer) => {
+        entries.forEach(entry => {
+            const { target } = entry;
+            console.log(entry, target)
+            
+            if (entry.intersectionRatio >= 0.15) {
+                target.classList.add("active");
+            } else {
+                target.classList.remove("active");
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    sections.forEach((section, index) => {
+        observer.observe(section);
+    });
+
+    window.onload(removeClass());
+
+</script>
+
+</body>
+</html>

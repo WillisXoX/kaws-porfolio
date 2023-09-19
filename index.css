@@ -1,0 +1,361 @@
+:root {
+    --white-regular: #F5F5F5;
+    --brown-regular: #978D92;
+    --black-regular: #1E1E1E;
+
+    --red-regular: #E10A0A;
+    --red-black: #D40606;
+
+    --normal-size: 17px;
+    --small-size: 14px;
+    --medium-size: 16px;
+    --medium-big: 30px;
+    --large-size: 45px;
+    --big-size: 55px;
+    --extra: 65px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html,
+body {
+    width: 100vw;
+    scroll-behavior: smooth;
+    background-color: var(--white-regular);
+}
+.app::-webkit-scrollbar {
+  display: none;
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  
+  /* 
+  scroll-snap-points-y: repeat(300px);
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  overflow-y: scroll; */
+
+  /* border: 2px solid red; */
+}
+
+/* .app .intro,
+.app .skills,
+.app .about {
+  scroll-snap-align: start;
+}
+ */
+a,
+button {
+    font-size: var(--small-size);
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: var(--white-regular);
+
+    transition: 0.3s ease-in-out;
+}
+a > img {
+    cursor: pointer;
+}
+button {
+    background-color: var(--red-regular);
+    width: 160px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+}
+button:hover {
+    cursor: pointer;
+    background-color: var(--red-black);
+}
+b {
+  font-style: italic;
+}
+li {
+    list-style-type: none;
+}
+img {
+    width: 100%;
+    height: inherit;
+}
+h1 {
+    /* border: 2px solid red; */
+    font-size: var(--extra);
+    font-weight: 800;
+    letter-spacing: -3px;
+    color: var(--black-regular);
+    line-height: 40px;
+    text-shadow: 0px 1px 6px rgba(0, 0, 0, .3);
+    white-space: nowrap;
+}
+h1.primary {
+    color: var(--brown-regular);
+}
+h2 {
+    font-size: var(--medium-big);
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: var(--black-regular);
+    line-height: 20px;
+    text-shadow: 0px 1px 6px rgba(0, 0, 0, .3);
+    white-space: nowrap;
+}
+p {
+    font-size: var(--normal-size);
+    letter-spacing: -.7px;
+    color: var(--black-regular);
+    text-shadow: 0px 1px 6px rgba(0, 0, 0, .2);
+    max-width: 480px;
+    line-height: 22px;
+}
+p.bold,
+span.bold {
+    font-size: 20px;
+    font-weight: 700;
+    /* letter-spacing: -.5px; */
+    font-style: italic;
+}
+small {
+    font-size: var(--normal-size);
+    font-weight: 400;
+    letter-spacing: 15px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, .3);
+}
+input {
+  outline: none;
+  width: 450px;
+  max-width: 450px;
+  /* min-width: 300px; */
+  height: 45px;
+  padding: 0 1em;
+  border-radius: 5px;
+  font-family: Fredoka, 'Segoe UI', sans-serif;
+  letter-spacing: -.5px;
+  font-size: var(--medium-size);
+  cursor: pointer;
+  border: 3px solid var(--brown-regular);
+  display: block;
+}
+input:focus {
+  background-color: var(--brown-regular);
+  border: 3px solid var(--white-regular);
+  color: var(--white-regular);
+}
+label {
+  font-size: var(--normal-size);
+  font-weight: 500;
+  letter-spacing: -1px;
+  font-style: italic;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, .3);
+}
+
+
+@media (max-width: 1400px) {
+    h1 {
+        font-size: var(--big-size);
+    }
+    p {
+      text-shadow: 0px 1px 6px rgba(0, 0, 0, .3);
+      letter-spacing: -.7px;
+      font-size: var(--medium-size);
+      max-width: 440px;
+    }
+}
+@media (max-width: 960px) {
+    p {
+        max-width: 400px;
+    }
+    small {
+      font-size: var(--small-size);
+    }
+    input {
+      width: 100%;
+      width: 350px;
+    }
+}
+@media (max-width: 640px) {
+    /* p {
+        max-width: 380px;
+    } */
+    h1 {
+        font-size: var(--large-size);
+        line-height: 25px;
+    }
+    small {
+        letter-spacing: 10px;
+    }
+}
+
+
+/* Text animations */
+@keyframes text-fadeIn {
+  from {
+      padding: 2em 0em;
+      opacity: 0;
+  } to {
+      padding: 2em 5em;
+      opacity: 1;
+  }
+}
+@keyframes text-fadeIn-1 {
+  from {
+      padding: 2em 0em;
+      opacity: 0;
+  } to {
+      padding: 2em 5em;
+      opacity: 1;
+  }
+}
+@keyframes text-fadeIn1 {
+  from {
+      padding: 2em 0em;
+      opacity: 0;
+  } to {
+      padding: 2em 3em;
+      opacity: 1;
+  }
+}
+@keyframes text-fadeIn1-1 {
+  from {
+      padding: 2em 0em;
+      opacity: 0;
+  } to {
+      padding: 2em 3em;
+      opacity: 1;
+  }
+}
+@keyframes text-fadeIn2 {
+  from {
+      padding: 2em -5em;
+      opacity: 0;
+  } to {
+      padding: 2em 1em;
+      opacity: 1;
+  }
+}
+@keyframes text-fadeIn3 {
+  from {
+      padding: 2em -5em;
+      opacity: 0;
+  } to {
+      padding: 0em 1em;
+      opacity: 1;
+  }
+}
+@keyframes text-fadeIn3-1 {
+  from {
+      padding: 2em -5em;
+      opacity: 0;
+  } to {
+      padding: 0em 1em;
+      opacity: 1;
+  }
+}
+@keyframes text-fadeIn4 {
+  from {
+      margin-top: 5em;
+      opacity: 0;
+  } to {
+      margin-top: 0em;
+      opacity: 1;
+  }
+}
+@keyframes text-fadeIn4-1 {
+  from {
+      margin-top: 5em;
+      opacity: 0;
+  } to {
+      margin-top: 0em;
+      opacity: 1;
+  }
+}
+@keyframes text-fadeIn5 {
+  from {
+      padding-top: 10em;
+      opacity: 0;
+  } to {
+      padding-top: 0em;
+      opacity: 1;
+  }
+}
+
+
+
+/* Testing scrolling */
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  section:nth-child(1){
+    color: #e0ffff;
+    }
+  section:nth-child(2){
+    color: #42455a;
+    background: #e0ffff;
+  } 
+  section:nth-child(3){
+    color: #e0ffff;
+  }
+  section:nth-child(4){
+    color: #42455a;
+    background: #e0ffff;
+  }
+  section .container{
+    margin: 100px;
+  }
+  section h1{
+    font-size: 3rem;
+    margin: 20px;
+  }
+  section h2{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  section .text-container{
+     display: flex;
+  }
+  section .text-container .text-box{
+    margin: 20px;
+    padding: 20px;
+    background: #00c2cb;
+  }
+  section .text-container .text-box h3{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 900px){
+    section h1{
+      font-size: 2rem;
+      text-align: center;
+    }
+    section .text-container{
+      flex-direction: column;
+    }
+  }
+  
+   /* .reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+    transition: 1s ease-in-out .5s;
+  } */
